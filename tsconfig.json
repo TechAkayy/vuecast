@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "moduleDetection": "force",
+    "module": "preserve",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@vuecast/astro": ["./packages/astro-module/src/"]
+    },
+    "types": ["node"],
+    "strict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "esModuleInterop": false,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  }
+}
