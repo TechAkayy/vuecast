@@ -1,6 +1,6 @@
 # @vuecast/astro-module
 
-Write Vue Single File Components (`.vue` files) in your Astro projects.
+Write Vue SFC Pages (`.vue` pages) in your Astro projects.
 
 ## Features
 
