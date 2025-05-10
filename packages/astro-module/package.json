@@ -1,8 +1,8 @@
 {
   "name": "@vuecast/astro-module",
-  "version": "1.0.0",
+  "version": "0.0.2-beta.0",
   "type": "module",
-  "description": "Astro integration for Vue SFC support",
+  "description": "Astro integration for Vue SFC pages",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -17,7 +17,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild"
+    "build": "unbuild",
+    "publish-beta": "npm run build && npm run increment-beta-version && npm publish --tag beta",
+    "increment-beta-version": "npm version prerelease --preid=beta"
   },
   "keywords": [
     "vue",
