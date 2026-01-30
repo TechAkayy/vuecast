@@ -5,7 +5,7 @@ type SetupHookParams = HookParameters<"astro:config:setup">;
 
 function VuecastAstro() {
   return {
-    name: "@vuecast/astro-vue-template",
+    name: "@vuecast/astro-module",
     hooks: {
       "astro:config:setup": async (params: SetupHookParams) => {
         const existingPlugins = params.config.vite?.plugins;
