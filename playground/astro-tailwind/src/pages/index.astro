@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const title = "Ola";
+const isLoggedIn = true;
+const fruits = ["apples", "oranges", "bananas", "cherries", "grapes"];
+const badges = [
+{ label: "Vue-SFC lovers", tone: "primary" },
+{ label: "No JSX required", tone: "dark" },
+];
+---
+<BaseLayout>
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+            <!-- Header badge -->
+            <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"> <span class="flex items-center gap-2"> <span v-for="(b, i) in badges" :key="i" :class="`text-xs rounded-full text-white px-4 py-1.5 ${
+              b.tone === 'primary' ? 'bg-primary-600' : 'bg-gray-900'
+            }`">
+            {{ b.label }} </span> <span class="text-sm font-medium">
+            {{ title }} — Vue template syntax in Astro </span> </span> </a>
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        VueCast for Astro </h1>
+            <!-- v-if demo -->
+            <p v-if="isLoggedIn" class="mb-8 text-lg text-gray-500 lg:text-xl dark:text-gray-400">
+        You’re logged in — this text is rendered using <code>v-if</code>. </p>
+            <!-- v-for demo -->
+            <div class="mx-auto max-w-xl mb-12 text-left">
+                <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+          v-for example </h2>
+                <ul class="space-y-2">
+                    <li v-for="(fruit, index) in fruits" :key="index" :data-name="fruit" class="p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                        {{ index + 1 }} — {{ fruit }}
+</li>
+                </ul>
+            </div>
+            <!-- HARD-CODED FEATURE CARDS (no v-for) -->
+            <div class="grid gap-6 md:grid-cols-3 text-left mb-12">
+                <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-lg font-semibold mb-2">Vue syntax in Astro</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+            Write <code>v-if</code>, <code>v-for</code>, <code>:bind</code>, and <code>{{ }}</code> directly inside <code>.astro</code> files. </p>
+                </div>
+                <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-lg font-semibold mb-2">No JSX required</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+            Keep your Vue muscle memory — no JSX, no render functions. </p>
+                </div>
+                <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-lg font-semibold mb-2">Astro-native</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+            Works inside Astro’s pipeline. Frontmatter stays intact. </p>
+                </div>
+            </div>
+            <!-- CTA -->
+            <div class="flex justify-center gap-4">
+                <a href="/about" class="inline-flex items-center px-6 py-3 text-white rounded-lg bg-primary-700 hover:bg-primary-800" :data-cta="`about-${fruits.length}`">
+          About Page </a>
+                <a href="#" class="inline-flex items-center px-6 py-3 border rounded-lg text-gray-700 dark:text-white dark:border-gray-700">
+          View Docs </a>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+<style is:global>
+  @import "../assets/css/tailwind.css";
+</style>

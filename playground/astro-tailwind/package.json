@@ -1,0 +1,24 @@
+{
+  "name": "@vuecast/astro-playground",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^5.1.4",
+    "@vuecast/astro-module": "workspace:*",
+    "astro": "^5.0.0",
+    "vue": "^3.5.27"
+  },
+  "devDependencies": {
+    "@pinegrow/tailwindcss-plugin": "^3.0.35",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,6 @@
+packages:
+  - packages/**
+  - playground/astro-tailwind
+
+patchedDependencies:
+  # Add any patched dependencies here if needed

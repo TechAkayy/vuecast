@@ -1,0 +1,49 @@
+{
+  "name": "vuecast",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@8.15.4",
+  "description": "Astro integration for Vue template syntax in .astro pages",
+  "author": "techakayy<techakayy@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techakayy/vuecast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/techakayy/vuecast/issues"
+  },
+  "homepage": "https://github.com/techakayy/vuecast#readme",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r --parallel run dev",
+    "test": "pnpm -r --parallel run test",
+    "play-tailwind": "cd playground/astro-tailwind && pnpm dev",
+    "play-vuetify": "cd playground/astro-vuetify && pnpm dev"
+  },
+  "keywords": [
+    "vue",
+    "sfc",
+    "meta-framework",
+    "astro",
+    "vue-components"
+  ],
+  "devDependencies": {
+    "@pinegrow/astro-module": "^3.0.70",
+    "@types/node": "22.15.17",
+    "@vitest/coverage-v8": "^1.3.1",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.3.1"
+  },
+  "peerDependencies": {
+    "astro": "^5.0.0",
+    "vite": "^6.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "6.3.5",
+      "@types/node": "22.15.17"
+    }
+  }
+}

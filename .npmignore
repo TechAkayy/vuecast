@@ -1,0 +1,31 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Development files
+.git/
+.gitignore
+.npmignore
+.editorconfig
+.prettierrc
+.eslintrc
+tsconfig.json
+build.config.ts
+
+# Test files
+test/
+__tests__/
+*.test.ts
+*.spec.ts
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# CI/CD
+.github/
+.gitlab/
+.gitlab-ci.yml
+.github/workflows/

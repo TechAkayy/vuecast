@@ -1,0 +1,6 @@
+[build]
+command = "pnpm build"
+publish = "playground/astro-tailwind/dist"
+
+[build.environment]
+NODE_VERSION = "20.14.0"

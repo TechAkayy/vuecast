@@ -1,0 +1,40 @@
+{
+  "name": "@vuecast/astro-module",
+  "version": "1.0.2",
+  "type": "module",
+  "description": "Astro integration for Vue template syntax in .astro pages",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "publish-beta": "npm run build && npm run increment-beta-version && npm publish --tag beta",
+    "increment-beta-version": "npm version prerelease --preid=beta",
+    "publish-patch": "npm run build && npm run increment-version && npm publish",
+    "increment-version": "npm version patch"
+  },
+  "keywords": [
+    "vue",
+    "astro",
+    "sfc",
+    "meta-framework"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "unbuild": "^2.0.0"
+  },
+  "dependencies": {
+    "@vue/compiler-dom": "^3.5.27"
+  }
+}
