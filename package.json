@@ -19,8 +19,7 @@
     "build": "pnpm -r run build",
     "dev": "pnpm -r --parallel run dev",
     "test": "pnpm -r --parallel run test",
-    "play-tailwind": "cd playground/astro-tailwind && pnpm dev",
-    "play-vuetify": "cd playground/astro-vuetify && pnpm dev"
+    "play-tailwind": "cd playground/astro-tailwind && pnpm dev"
   },
   "keywords": [
     "vue",

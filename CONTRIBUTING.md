@@ -31,8 +31,7 @@ vuecast/
 ├── packages/
 │   └── astro-module/     # @vuecast/astro-module integration
 ├── playground/           # local demo apps
-│   ├── astro-tailwind/
-│   └── astro-vuetify/
+│   └── astro-tailwind/
 ├── dist/                 # build artifacts (workspace root)
 └── package.json
 ```
@@ -49,8 +48,6 @@ Run a playground app:
 
 ```bash
 pnpm play-tailwind
-# or
-pnpm play-vuetify
 ```
 
 ## Testing
