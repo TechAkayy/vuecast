@@ -63,6 +63,10 @@ const fruits = ["apples", "oranges", "bananas", "cherries", "grapes"];
 Transformed output (Astro JSX-style):
 
 ```astro
+---
+const isLoggedIn = true;
+const fruits = ["apples", "oranges", "bananas", "cherries", "grapes"];
+---
 <div>
   {isLoggedIn ? (<p>Welcome back!</p>) : null}
   <h1>Hello from VueCast!</h1>
